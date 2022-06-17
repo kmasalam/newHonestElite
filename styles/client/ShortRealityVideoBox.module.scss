@@ -1,0 +1,64 @@
+@import "./foundation/variable";
+@import "./foundation/breakpoints";
+@import "./foundation/mixin";
+@import "./foundation/presets";
+
+
+.short_reality_container__box{
+    max-width: 14.28%;
+    flex: 0 0 14.28%;
+    @include transition(.40s);
+    :global .short_reality_container__box_inner{
+         img{
+        
+        }
+        :global .short_reality_container__box_content{
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            bottom: 10px;
+            width: 96% !important;
+            @include transition(.30s);
+            :global .short_reality_box__top{
+                :global .short_reality_box__top_author{
+                     a{
+                         span{
+
+                        }
+                    }
+                }
+                 span{
+                     a{
+
+                    }
+                }
+            }
+            :global .short_reality_status{
+                 a{
+
+                }
+            }
+            :global .short_reality__action_bar{
+                 a{
+                     img{
+
+                    }
+                }
+            }
+        }
+        :global .phone_bottom__parent{
+            left: 0px;
+            top: calc(100% - 5px);
+             .phone_bottom{
+
+            }
+        }
+    }
+    &:hover{
+        transform: scale(1.1);
+        :global .short_reality_container__box_content{
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}

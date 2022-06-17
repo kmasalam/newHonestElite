@@ -1,0 +1,10 @@
+.controlsWrapper{
+    visibility: visible !important;
+    position: absolute;
+    
+    height: initial;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }

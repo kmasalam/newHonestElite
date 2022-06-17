@@ -1,0 +1,55 @@
+module.exports = {
+  important: true,
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+        colors: {
+            'primary': '#ED028C',
+            'c2121': '#212121',
+            'cd6d5': '#D6D5D5',
+            'c6f6f': '#6F6F6F',
+            'cec1a': '#EC1AF0',
+            'cf081': '#F0811A',
+            'c982a': '#982A2A',
+            'c6b1a': '#6B1AF0',
+            'c26c1': '#26C1D9',
+            'ce204': '#E20405',
+            'cc4c4': '#C4C4C4',
+            'c8383': '#838383',
+            'cf0f0': '#F0F0F0',
+            'ce8e8': '#E8E8E8',
+            'cf9f9': '#F9F9FB',
+            'c5db7': '#5DB7CF',
+            'ce7e7': '#E7E7E7DE',
+            'c6666': '#66666C',
+            'cff42': '#FF42FF',
+            'cf2f2': '#F2F2F2',
+            'Violet': '#39005C',
+            'cf2fc': '#F2FCFF',
+            'ce0e0': '#E0E0E2',
+            'light-primary': '#F783BC',
+            'cd9d9': '#D9D9D9'
+        },
+        fontSize:{
+            'vs': '10px',
+            'xs':'12px',
+            '14':'14px',
+            '18': '18px',
+            '20': '20px',
+            '12': '12px',
+            '8': '8px',
+            '10': '10px',
+            '13': '13px',
+            '32': '32px',
+            '42': '42px',
+            '20': '20px',
+            '54': '54px',
+            '24': '24px'
+        }
+    },
+  },
+  plugins: [],
+}

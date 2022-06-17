@@ -1,0 +1,21 @@
+@import "./foundation/variable";
+@import "./foundation/breakpoints";
+@import "./foundation/mixin";
+@import "./foundation/presets";
+
+
+// .search_bar{
+//     :global .MuiInputBase-root{
+//         borderRadius: 0px !important;
+//     };
+//     :global .MuiSelect-select{
+//         padding: 13px 15px !important;
+//     };
+//     :global .MuiOutlinedInput-input{
+//         padding: 13.5px 14px !important;
+//         borderRadius: 0px !important
+//     };
+//     :global .searchBar_btn{
+//         border: 1px solid #bbb !important;
+//     }
+// }

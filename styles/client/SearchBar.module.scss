@@ -1,0 +1,71 @@
+@import "./foundation/variable";
+@import "./foundation/breakpoints";
+@import "./foundation/mixin";
+@import "./foundation/presets";
+
+
+
+.bannerMiddleTransparentText{
+    -webkit-text-stroke: 1px black; 
+    font-family: sans;
+    color: transparent !important;
+}
+
+
+
+
+
+.MuiOutlinedInput-root{
+    &:hover{
+        fieldset{
+            border-color: black !important;
+        }
+    }
+}
+
+
+%MuiSelect-select{
+    padding: 14px 12px;
+}
+
+
+
+
+
+.darkBordered{
+    @include searchBarMixin(darkBordered,$c2121,md,transparent,$c2121,'')
+    // label{
+    //     color: $c2121 !important;
+    // }
+    // :global .MuiSelect-select{
+    //     @extend %MuiSelect-select;
+    //     text-transform: capitalize;
+    // }
+    // :global .MuiInputBase-input{
+    //     padding: 14px 10px !important;
+    // }
+    // :global .MuiButton-root{
+    //     height: 51px;
+    //     border-radius: 5px;
+    //     border: 1px solid  $black;
+    // }
+    // fieldset{
+    //     border: 1px solid  $c2121 !important;
+    //     legend{
+    //         span{
+    //             color: $c2121 !important;
+    //         }
+    //     }
+    // }
+}
+
+.lightBordered{
+    @include searchBarMixin(lightBordered,$c6f6f,sm,transparent,$lightDark,'');
+}
+
+.whiteBordered{
+    @include searchBarMixin(whiteBordered,$white,xl,transparent,$white,'');
+}
+// .lightFilled{
+//     @include searchBarMixin(lightFilled,$c6f6f,xs,$white,$white,'');
+// }

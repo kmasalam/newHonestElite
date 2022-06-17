@@ -1,0 +1,15 @@
+@import "./foundation/variable";
+@import "./foundation/breakpoints";
+@import "./foundation/mixin";
+@import "./foundation/presets";
+
+
+.relation_lounges_item{
+    // maxWidth: 14.28%;
+    :global .relation_lounges_item_inner{
+        padding: 2px 5px;
+        :global .relation_img{
+           max-width: 100% !important 
+        }
+    }
+}

@@ -1,0 +1,55 @@
+@import "./foundation/variable";
+@import "./foundation/breakpoints";
+@import "./foundation/mixin";
+@import "./foundation/presets";
+
+
+
+.controlsWrapper{
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background: transparent;
+}
+
+.prettoSlider{
+    margin-top: 7px;
+    :global .MuiSlider-root{
+        background: #fff;
+    }
+    :global .MuiSlider-rail{
+        background: #fff;
+    }
+    :global .MuiSlider-track{
+        background: #fff;
+    }
+    :global .MuiSlider-thumb{
+        background: #fff;
+    }
+}
+
+.volumeSlider{
+    width: 50px !important;
+    :global .MuiSlider-root{
+        background: #fff;
+    }
+    :global .MuiSlider-rail{
+        background: #fff;
+    }
+    :global .MuiSlider-track{
+        background: #fff;
+    }
+    :global .MuiSlider-thumb{
+        background: #fff;
+    }
+}
+
+.borderedPlayPause{
+    border: 1px solid rgb(202, 193, 193) !important;
+}

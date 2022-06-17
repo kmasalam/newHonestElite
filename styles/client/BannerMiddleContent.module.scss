@@ -1,0 +1,105 @@
+@import "./foundation/variable";
+@import "./foundation/breakpoints";
+@import "./foundation/mixin";
+@import "./foundation/presets";
+
+
+.bannerMiddleContentArea{
+    left: 50%;
+    transform: translateX(-50%);
+    height: initial;
+    bottom: 88px;
+}
+
+.bannerMiddleBottom{
+    left: 50%;
+    transform: translateX(-50%);
+    top: initial;
+    bottom: 80px;
+    height: initial;
+}
+
+.bannerMiddleTransparentText{
+    -webkit-text-stroke: .2px #fff; /* width and color */
+    font-family: 'cooper_blkoul_btblack' !important;
+    color: transparent !important;
+    font-size: 24px !important;
+    font-weight: 900 !important;
+}
+
+.select{
+    label{
+        color: $white !important;
+        font-family: $rubik;
+    }
+    .MuiOutlinedInput-root{
+        &:hover{
+            fieldset{
+                border-color: $white !important;
+            }
+        }
+    }
+    fieldset{
+        border-color: $white !important;
+        legend{
+            span{
+                color: $white !important;
+                font-family: $rubik;
+                font-style: italic;
+            }
+        }
+    }
+    li{
+        a{
+            color: black !important;
+            font-style: italic;
+        }
+    }
+}
+.searchField{
+    
+    .MuiOutlinedInput-root{
+        &:hover{
+            fieldset{
+                border-color: $white !important;
+            }
+        }
+    }
+    input{
+        color: $white;
+        font-family: $rubik;
+    }
+    label{
+        color: $white;
+        font-family: $rubik;
+        font-weight: 400;
+    }
+    
+    fieldset{
+        border-color: $white !important;
+        font-family: $rubik;
+        font-weight: 400;
+        &:hover{
+            border-color: $white !important;
+        }
+    }
+}
+
+.searchBtn{
+    border: 1px solid $white !important;
+    height: 52px;
+    margin-left: 10px;
+    font-family: $rubik;
+    &:hover{
+        background: $cprimary;
+    }
+}
+
+
+.MuiOutlinedInput-root{
+    &:hover{
+        fieldset{
+            border-color: $white !important;
+        }
+    }
+}

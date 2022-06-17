@@ -1,0 +1,43 @@
+
+.videoList{
+    bottom: 15%;
+    ul{
+        li{
+            position: relative;
+            cursor: pointer;
+            &::before{
+                content: "";
+                position: absolute;
+                position: absolute;
+                left: 0;
+                top: 0;
+                border: 5px solid rgba(255, 255, 255, 0.3);
+                width: calc(100% - 0px);
+                height: calc(100% - 6px);
+                z-index: 5;
+            }
+        }
+    }
+}
+.videlistBottom{
+    top: initial;
+    bottom: 185px;
+    // transform: translateY(-50%);
+    ul{
+        li{
+            position: relative;
+            cursor: pointer;
+            &::before{
+                content: "";
+                position: absolute;
+                position: absolute;
+                left: 0;
+                top: 0;
+                border: 5px solid rgba(255, 255, 255, 0.3);
+                width: calc(100% - 0px);
+                height: calc(100% - 6px);
+                z-index: 5;
+            }
+        }
+    }
+}

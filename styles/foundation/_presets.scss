@@ -1,0 +1,14 @@
+%ul_rules{
+    margin-left: 0;
+    padding-left: 0;
+    list-style: none;
+    li{
+        list-style: none;
+    }
+}
+%a_rules{
+    text-decoration: none;
+  &:hover{
+    text-decoration: none;
+  }
+}

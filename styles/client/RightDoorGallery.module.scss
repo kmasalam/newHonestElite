@@ -1,0 +1,23 @@
+@import "./foundation/variable";
+@import "./foundation/breakpoints";
+@import "./foundation/mixin";
+@import "./foundation/presets";
+
+
+
+.open_right_doors_item{
+    :global .home_open_right_doors_box{
+        bottom: 35px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(1,1,1,.2);
+        @include transition(.30s);
+    }
+    &:hover{
+        :global .home_open_right_doors_box{
+            background: $cprimary;
+            border-color: $cprimary !important;
+
+        }
+    }
+}

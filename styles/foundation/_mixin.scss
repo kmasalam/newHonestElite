@@ -1,0 +1,292 @@
+@mixin flex($flow) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @if $flow == "column" {
+    flex-flow: $flow;
+  } @else if $flow == "row" {
+    flex-flow: $flow;
+  } 
+}
+
+%MuiSelect-select{
+  padding: 14px 12px;
+}
+
+//lightBordered
+@mixin  searchBarMixin($type,$textclr:$c2121,$size:md,$bgclr:transparent,$bdrclr:$c2121,$hvrclr) {
+    label{
+        color: $textclr !important;
+        // z-index: -1;
+        
+    }
+    :global #demo-simple-select-label{
+      @if $type == lightBordered {
+          background: #fff;
+          top: 2px;
+          padding: 0 5px;
+          font-family: 'Rubik', sans-serif !important;
+      }
+    }
+    
+    :global .MuiSelect-select{
+        
+        text-transform: capitalize;
+        
+        @if $size == sm{
+
+        }@else if $size == xs {
+          padding: 10px 12px;
+          border-radius: 0px;
+        }@else{
+          padding: 14px 12px;
+          color: $textclr !important;
+        }
+    }
+    :global .MuiInputLabel-root{
+        @if $size == sm{
+          font-size: 14px !important;
+          // transform: translate(14px, 10px) scale(1) !important;
+          // z-index: 0;
+        }
+       
+          
+            @if $size == xs{
+            top: -6px;
+            font-size: 14px;
+          }
+        
+    }
+    :global .MuiInputBase-root{
+      @if $type == whiteBordered{
+        border-radius: 2px !important;
+        height: 55px !important;
+      }
+    }
+    :global .MuiMenuItem-root{
+      font-family: 'Rubik', sans-serif !important;
+    }
+    :global .MuiInputBase-input{
+      background: $bgclr;
+      font-family: 'Rubik', sans-serif !important;
+      @if $size == sm {
+        color: #6F6F6F !important;
+        // min-height: 38px;
+        font-size: 14px !important;
+        border: 1px solid  $bdrclr;
+      }@else if $size == xs {
+        padding: 11px 10px !important;
+        font-size: 14px !important;
+      }@else{
+        padding: 14px 10px !important;
+        color: $textclr !important;
+      }
+
+      @if $type == whiteBordered{
+          border-radius: 0px !important;
+      }
+        
+    }
+    :global .MuiSelect-select{
+      background: $bgclr;
+      @if $size == sm {
+        padding: 7.5px 14px !important;
+        border-radius: 0;
+      }
+        
+    }
+    :global .MuiButton-root{
+        border-radius: 5px;
+        border: 1px solid  $bdrclr;
+        background: $bgclr;
+        @if $size == xl{
+          height: 55px !important;
+        }
+        @if $size == sm{
+          height: 38px;
+          border-radius: 0;
+        }@else if $size == 'xs' {
+          height: 42px !important;
+          border-radius: 0px !important;
+        }@else{
+          height: 55px !important;
+        }
+        color: $textclr !important;
+
+        @if $type == lightBordered {
+            svg{
+              font-size: 35px;
+            }
+        }
+        @if $type == whiteBordered{
+            border-radius: 2px !important;
+        }
+    }
+    fieldset{
+        border: 1px solid  $bdrclr !important;
+        legend{
+            span{
+                color: $bdrclr !important;
+            }
+        }
+    }
+}
+
+
+
+$xs: "0";
+$sm: "640px";
+$md: "768px";
+$lg: "1024px";
+$xl: "1280px";
+$xxl: "1536px";
+
+
+@mixin respond-to($media) {
+  @if $media == xs {
+    @media only screen and (max-width: $sm) {
+      @content;
+    }
+  } @else if $media == sm {
+    @media only screen and (min-width: $sm) {
+      @content;
+    }
+  } @else if $media == md {
+    @media only screen and (min-width: $md) {
+      @content;
+    }
+  } @else if $media == lg {
+    @media only screen and (min-width: $lg) {
+      @content;
+    }
+  } @else if $media == xl {
+    @media only screen and (min-width: $xl) {
+      @content;
+    }
+  } @else if $media == xxl {
+    @media only screen and (min-width: $xxl) {
+      @content;
+    }
+  }
+}
+
+@mixin orientation($direction) { 
+
+  $orientation-landscape: "(orientation:landscape)"; 
+  $orientation-portrait: "(orientation:portrait)";
+
+  @if $direction == landscape {
+    @media #{$orientation-landscape} { @content; } 
+  }
+  @if $direction == portrait {
+    @media #{$orientation-portrait} { @content; } 
+  }
+} 
+
+@mixin transition($timing) {
+  transition: all $timing linear;
+}
+
+
+@mixin bordered_effect($borderSize:10px,$borderColor:$white,$normalSize:80px,$hoveredSize:100px,$distance:50px,$normalVisibility:visible) {
+  position: relative;
+  &::before{
+      content: "";
+      position: absolute;
+      left: $distance;
+      top: $distance;
+      border-top: $borderSize solid $borderColor;
+      width: $normalSize;
+      height: $normalSize;
+      border-left: $borderSize solid $borderColor;
+      @include transition(.30s);
+      z-index: 5;
+      visibility: $normalVisibility;
+  }
+  &::after{
+      content: "";
+      position: absolute;
+      right: $distance;
+      bottom: $distance;
+      border-right: $borderSize solid $borderColor;
+      width: $normalSize;
+      height: $normalSize;
+      border-bottom: $borderSize solid $borderColor;
+      @include transition(.30s);
+      z-index: 5;
+      visibility: $normalVisibility;
+  }
+  :global .top_right{
+      right: $distance;
+      top: $distance;
+      width: $normalSize;
+      background: $borderColor;
+      height: $borderSize;
+      position: absolute;
+      @include transition(.30s);
+      z-index: 5;
+      visibility: $normalVisibility;
+      &::before{
+          content: "";
+          right: 0px;
+          top: 0px;
+          width: $borderSize;
+          background: $borderColor;
+          height: $normalSize;
+          position: absolute;
+          @include transition(.30s);
+          z-index: 5;
+          visibility: $normalVisibility;
+      }
+  }
+  :global .bottom_left{
+      left: $distance;
+      bottom: $distance;
+      width: $normalSize;
+      background: $borderColor;
+      height: $borderSize;
+      position: absolute;
+      @include transition(.30s);
+      z-index: 5;
+      visibility: $normalVisibility;
+      &::before{
+          content: "";
+          left: 0px;
+          bottom: 0px;
+          width: $borderSize;
+          background: $borderColor;
+          height: $normalSize;
+          position: absolute;
+          @include transition(.30s);
+          visibility: $normalVisibility;
+      }
+  }
+  &:hover{
+      &::before{
+          width: $hoveredSize;
+          height: $hoveredSize;
+          visibility: visible;
+      }
+      &::after{
+          width: $hoveredSize;
+          height: $hoveredSize;
+          visibility: visible;
+      }
+      :global .top_right{
+          width: $hoveredSize;
+          visibility: visible;
+          &::before{
+              height: $hoveredSize;
+              visibility: visible;
+          }
+      }
+      :global .bottom_left{
+          width: $hoveredSize;
+          visibility: visible;
+          &::before{
+              height: $hoveredSize;
+              visibility: visible;
+          }
+      }
+  }
+}

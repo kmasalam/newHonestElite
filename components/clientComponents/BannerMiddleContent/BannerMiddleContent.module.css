@@ -1,0 +1,17 @@
+
+.select select{
+    border: 1px solid #fff;
+}
+.select fieldset{
+    border-color: #fff !important;
+}
+.select fieldset legend span {
+    color: #fff !important;
+}
+.searchField{
+    :global .MuiOutlinedInput-root:hover{
+        :global fieldset{
+            border-color: $white !important;
+        }
+    }
+}

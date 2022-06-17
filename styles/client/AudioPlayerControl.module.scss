@@ -1,0 +1,36 @@
+@import "./foundation/variable";
+@import "./foundation/breakpoints";
+@import "./foundation/mixin";
+@import "./foundation/presets";
+
+
+
+.prettoSlider{
+    margin-top: 7px;
+    :global .MuiSlider-root{
+        background: $black;
+    }
+    :global .MuiSlider-rail{
+        background: $black;
+    }
+    :global .MuiSlider-track{
+        background: $black;
+    }
+    :global .MuiSlider-thumb{
+        background: $black;
+    }
+}
+.volume_slider{
+    :global .MuiSlider-root{
+        background: $black;
+    }
+    :global .MuiSlider-rail{
+        background: $black;
+    }
+    :global .MuiSlider-track{
+        background: $black;
+    }
+    :global .MuiSlider-thumb{
+        background: $black;
+    }
+}
