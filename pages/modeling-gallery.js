@@ -36,7 +36,7 @@ import {NewsTickerData} from 'data/NewsTickerData'
 import {ModelingGalleryData} from 'data/ModelingGalleryData'
 
 
-function index(props) {
+function ModellingGallery(props) {
     const ImageLoader = ({ src, width, quality }) => {
         return `/${src}?w=${width}&q=${quality || 75}`;
     };
@@ -73,4 +73,4 @@ function index(props) {
     );
 }
 
-export default index;
+export default ModellingGallery;

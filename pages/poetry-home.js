@@ -65,7 +65,7 @@ const PlagounrItemBox = forwardRef(({href,number,text }, ref) => {
 })
 
 
-function poetryHome(props) {
+function PoetryHome(props) {
     const [activePlayground,setActivePlayground] = useState(true);
     const itemToLoad = 4;
     const [popularVideoItem, setPopularvideoItem] = useState(8);
@@ -322,4 +322,4 @@ function poetryHome(props) {
   );
 }
 
-export default poetryHome;
+export default PoetryHome;

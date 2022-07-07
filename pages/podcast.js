@@ -74,7 +74,7 @@ import Image from "next/image";
 import { DoneOutlined, FlatwareOutlined } from "@mui/icons-material";
 import {upcommingEventsData} from 'data/VideoListData'
 
-export default function Home() {
+export default function PodcastHome() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [age, setAge] = React.useState("all");
   

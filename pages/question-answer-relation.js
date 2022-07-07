@@ -45,7 +45,7 @@ import SearchBar from "clientComponents/SearchBar";
 import QuestionAnswerCardOne from "clientComponents/QuestionAnswerCardOne";
 import {QuestionAnswerCardData} from "data/QuestionAnswerCardData"
 
-function questionAnswer(props) {
+function QuestionAnswerRelation(props) {
   const ImageLoader = ({ src, width, quality }) => {
     return `/${src}?w=${width}&q=${quality || 75}`;
   };
@@ -236,4 +236,4 @@ function questionAnswer(props) {
   );
 }
 
-export default questionAnswer;
+export default QuestionAnswerRelation;

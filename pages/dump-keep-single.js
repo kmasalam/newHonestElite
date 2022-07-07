@@ -50,7 +50,7 @@ import { SingleTubeVideoData } from "data/SingleTubeVideoData.js";
 import AudioPlayer from "clientComponents/AudioPlayer";
 import TotalDumpKeepCard from "clientComponents/TotalDumpKeepCard";
 
-function dumpKeep3({ ...allprops }) {
+function DumpKeepSingle({ ...allprops }) {
   const [visibleItem, setVisibleItem] = useState(2);
   const ImageLoader = ({ src, width, quality }) => {
     return `/${src}?w=${width}&q=${quality || 75}`;
@@ -327,4 +327,4 @@ function dumpKeep3({ ...allprops }) {
   );
 }
 
-export default dumpKeep3;
+export default DumpKeepSingle;

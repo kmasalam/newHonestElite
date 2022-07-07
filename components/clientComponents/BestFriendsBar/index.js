@@ -24,7 +24,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 
-function index(props) {
+function BestFriendsBar(props) {
 
     const [viewableItem,setViewableItem] = useState(7)
     const BestFriendsData = [
@@ -106,4 +106,4 @@ function index(props) {
     );
 }
 
-export default index;
+export default BestFriendsBar;

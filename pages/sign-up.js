@@ -31,7 +31,7 @@ const _ = require("lodash");
 
 import { useForm } from "react-hook-form";
 
-function index(props) {
+function SignUp(props) {
     const { register, formState: { errors }, handleSubmit } = useForm();
     const onSubmit = (data) => console.log(data);
     const ImageLoader = ({ src, width, quality }) => {
@@ -203,4 +203,4 @@ function index(props) {
     );
 }
 
-export default index;
+export default SignUp;

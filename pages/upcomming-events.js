@@ -67,7 +67,7 @@ const CssTextField = styled(TextField)({
   },
 });
 
-export default function index() {
+export default function UpcommingEvents() {
   const [sportsItem, setSportsItem] = useState(8);
   const [sportsEventList, setSportsEventList] = useState(null);
   const [musicEventList, setMusicEventList] = useState(null);

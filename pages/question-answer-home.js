@@ -43,7 +43,7 @@ import SearchBar from "clientComponents/SearchBar";
 import QuestionAnswerCardOne from "clientComponents/QuestionAnswerCardOne";
 import { QuestionAnswerCardData } from "data/QuestionAnswerCardData";
 
-function dumpKeep2(props) {
+function QuestionAnswerHome(props) {
   const [questionCategory, setQuestionTCategory] = useState(null);
 
   const ImageLoader = ({ src, width, quality }) => {
@@ -272,4 +272,4 @@ function dumpKeep2(props) {
   );
 }
 
-export default dumpKeep2;
+export default QuestionAnswerHome;

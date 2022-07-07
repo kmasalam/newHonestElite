@@ -34,7 +34,7 @@ import {DumpKeepData} from "data/DumpKeepData"
 import {NewsTickerData} from 'data/NewsTickerData'
 
 
-function dumpKeep(props) {
+function DumpKeepHome(props) {
     const ImageLoader = ({ src, width, quality }) => {
         return `/${src}?w=${width}&q=${quality || 75}`;
       };
@@ -121,4 +121,4 @@ function dumpKeep(props) {
     );
 }
 
-export default dumpKeep;
+export default DumpKeepHome;

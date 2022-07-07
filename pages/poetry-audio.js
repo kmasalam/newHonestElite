@@ -44,7 +44,7 @@ import {PoetryAudioData} from 'data/PoetryAudioData'
 import SimilarAudioCard from "clientComponents/SimilarAudioCard";
 
 
-function poetryHome(props) {
+function PoetryAudio(props) {
   const itemToLoad = 2;
   const [poetryItem, setPoetryItem] = useState(8);
 
@@ -172,4 +172,4 @@ function poetryHome(props) {
   );
 }
 
-export default poetryHome;
+export default PoetryAudio;

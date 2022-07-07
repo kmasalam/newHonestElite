@@ -62,7 +62,7 @@ const Alert = forwardRef(function Alert(props, ref) {
 });
 
 
-function index(props) {
+function PoetryVideo(props) {
   const [popularVideoItem, setPopularvideoItem] = useState(8);
   const [theaterView,setTheaterView] = useState(false)
   const [snackbarOpen, setSnackbarOpen] = useState(false);
@@ -318,4 +318,4 @@ function index(props) {
   );
 }
 
-export default index;
+export default PoetryVideo;

@@ -37,7 +37,7 @@ import AstrologyMasonaryCard from "clientComponents/AstrologyCard/AstrologyMason
 import { HororscopeCategory, astrologyData } from "data/HororscopeData";
 
 
-function index(props) {
+function AstrologyHororscope(props) {
   const ImageLoader = ({ src, width, quality }) => {
     return `/${src}?w=${width}&q=${quality || 75}`;
   };
@@ -234,4 +234,4 @@ function index(props) {
   );
 }
 
-export default index;
+export default AstrologyHororscope;

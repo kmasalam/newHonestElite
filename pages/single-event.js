@@ -64,7 +64,7 @@ import PersonalLinks from "clientComponents/PersonalLinks";
 import Footer from "clientComponents/Footer";
 import { useRouter } from "next/router";
 
-function index(props) {
+function SingleEvents(props) {
   const router = useRouter();
 
   const type = 2;
@@ -541,4 +541,4 @@ function index(props) {
   );
 }
 
-export default index;
+export default SingleEvents;

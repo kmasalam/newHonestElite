@@ -54,7 +54,7 @@ import VideoStory from "clientComponents/SingleTubeVideo/VideoStory";
 import { SingleTubeVideoData } from "data/SingleTubeVideoData";
 import SimilarAudioCard from "clientComponents/SimilarAudioCard";
 
-function poetryHome(props) {
+function SinglePoetryAudio(props) {
   const itemToLoad = 2;
   const [poetryItem, setPoetryItem] = useState(8);
   const [showLyrics, setShowLyrics] = useState(false);
@@ -317,4 +317,4 @@ function poetryHome(props) {
   );
 }
 
-export default poetryHome;
+export default SinglePoetryAudio;

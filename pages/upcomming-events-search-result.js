@@ -84,7 +84,7 @@ const CssTextField = styled(TextField)({
   },
 });
 
-function index(props) {
+function UpcommingEventSearchResult(props) {
   const ImageLoader = ({ src, width, quality }) => {
     return `/${src}?w=${width}&q=${quality || 75}`;
   };
@@ -234,4 +234,4 @@ function index(props) {
   );
 }
 
-export default index;
+export default UpcommingEventSearchResult;

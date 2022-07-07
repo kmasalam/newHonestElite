@@ -38,7 +38,7 @@ const masonryOptions = {
 
 const imagesLoadedOptions = { background: ".my-bg-image-el" };
 
-function randomGallery(props) {
+function RandomGallery(props) {
   const [open, setOpen] = useState(false);
   const [hitem,setHitem] = useState('')
   const itemToLoad = 8;
@@ -196,4 +196,4 @@ function randomGallery(props) {
   );
 }
 
-export default randomGallery;
+export default RandomGalleryRandomGallery;

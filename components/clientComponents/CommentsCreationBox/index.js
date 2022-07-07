@@ -54,7 +54,7 @@ import CommentsTextarea from "./CommentsTextarea";
 import CommentsToolbarCard from "./CommentsToolbarCard";
 import CommentsButton from "./CommentsButton";
 
-function index({ ...allprops }) {
+function CommentsCreationBox({ ...allprops }) {
   const { size, hasBorderBottom,hasLocation,buttonText, buttonType } = allprops;
 
   if(!_.isEmpty(size)){
@@ -75,4 +75,4 @@ function index({ ...allprops }) {
   
 }
 
-export default index;
+export default CommentsCreationBox;

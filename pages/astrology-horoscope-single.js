@@ -54,7 +54,7 @@ import CommentCard from 'clientComponents/SingleTubeVideo/CommentCard'
 import AstrologyBoxCard from 'clientComponents/AstrologyCard/AstrologyBoxCard'
 import Head from 'next/head'
 
-function index(props) {
+function AstrologyHororshopeSingle(props) {
   const ImageLoader = ({ src, width, quality }) => {
     return `/${src}?w=${width}&q=${quality || 75}`;
   };
@@ -345,4 +345,4 @@ function index(props) {
   );
 }
 
-export default index;
+export default AstrologyHororshopeSingle;

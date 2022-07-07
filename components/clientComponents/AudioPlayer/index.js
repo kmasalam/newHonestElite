@@ -166,7 +166,7 @@ const useStyles = makeStyles((theme) => ({
   let count = 0;
 
 
-function index({...allprops}) {
+function AudioPlayer({...allprops}) {
   // const screen1 = useFullScreenHandle();
 
   const handle = useFullScreenHandle();
@@ -505,4 +505,4 @@ function index({...allprops}) {
     );
 }
 
-export default index;
+export default AudioPlayer;

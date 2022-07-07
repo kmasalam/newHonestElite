@@ -29,7 +29,7 @@ const _ = require("lodash");
 //
 import { Parallax } from "react-parallax";
 
-function index(props) {
+function RulesEngagement(props) {
     const heWindow = useWindowSize();
   const image1 =
     "https://images.unsplash.com/photo-1593642634443-44adaa06623a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1025&q=80";
@@ -267,4 +267,4 @@ Prostitution T.V videos
   );
 }
 
-export default index;
+export default RulesEngagement;

@@ -43,7 +43,7 @@ import Link from "next/link";
 import Image from "next/image";
 const _ = require("lodash");
 
-function index(props) {
+function WrittingPoetry(props) {
   const ImageLoader = ({ src, width, quality }) => {
     return `/${src}?w=${width}&q=${quality || 75}`;
   };
@@ -199,4 +199,4 @@ function index(props) {
   );
 }
 
-export default index;
+export default WrittingPoetry;

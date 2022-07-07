@@ -120,7 +120,7 @@ const humanTraffickingTips = [
   },
 ];
 
-function index(props) {
+function HumanTrafficking(props) {
   const [openReportForm, setOpenReportForm] = useState(false);
   const [fullWidth, setFullWidth] = useState(true);
   const ImageLoader = ({ src, width, quality }) => {
@@ -714,4 +714,4 @@ function index(props) {
   );
 }
 
-export default index;
+export default HumanTrafficking;

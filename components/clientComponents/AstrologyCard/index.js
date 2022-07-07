@@ -24,7 +24,7 @@ import Image from "next/image";
 
 const _ = require("lodash");
 
-function index({item,width,height}) {
+function AstrologyCard({item,width,height}) {
 
     console.log('item',item)
 
@@ -60,4 +60,4 @@ function index({item,width,height}) {
     }
 }
 
-export default index;
+export default AstrologyCard;

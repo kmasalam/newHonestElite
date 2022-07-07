@@ -51,7 +51,7 @@ import Image from "next/image";
 const _ = require("lodash");
 import PoetryAuthorCard from "clientComponents/PoetryAuthorCard";
 
-function index(props) {
+function WrittingPoetrySingle(props) {
   const ImageLoader = ({ src, width, quality }) => {
     return `/${src}?w=${width}&q=${quality || 75}`;
   };
@@ -332,4 +332,4 @@ function index(props) {
   );
 }
 
-export default index;
+export default WrittingPoetrySingle;
