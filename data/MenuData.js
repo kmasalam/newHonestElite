@@ -20,7 +20,7 @@ export const navList = [
         link: '#'
     },
     {
-        text: 'LGBTQ',
+        text: 'TESLA',
         link: '#'
     },
     {
