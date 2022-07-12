@@ -196,4 +196,4 @@ function RandomGallery(props) {
   );
 }
 
-export default RandomGalleryRandomGallery;
+export default RandomGallery;
