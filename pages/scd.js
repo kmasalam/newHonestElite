@@ -3,18 +3,43 @@ import Head from "next/head";
 // User Defined Components
 import Footer from "clientComponents/Footer";
 import HomeBanner from "clientComponents/HomeBanner";
-import HomeMagazineAdd from "clientComponents/HomeMagazineAdd";
 import HomeNavigation from "clientComponents/HomeNavigation";
-import HomeOpenRightDoors from "clientComponents/HomeOpenRightDoors";
-import HomeTrendingAdd from "clientComponents/HomeTrendingAdd";
-import InterestingGallery from "clientComponents/InterestingGallery";
-import ModellingGallery from "clientComponents/ModellingGallery";
-import ModellingGallerySlide from "clientComponents/ModellingGallerySlide";
+import HomeSudio from "clientComponents/HomeSudio";
 import PersonalLinks from "clientComponents/PersonalLinks";
 import RelationLounges from "clientComponents/RelationLounges";
+import ScdGallery from "clientComponents/ScdGallery";
 import ShortRealityVideo from "clientComponents/ShortRealityVideo";
 import { VideoListData } from "data/VideoListData";
+
 // new sdf
+
+const LeftMenusData = [
+  {
+    icon: "images/banner-left-icon1.svg",
+    text: `Rules of <br/> engaement`,
+    link: "/rules-engagement",
+  },
+  {
+    icon: "images/banner-left-icon3.svg",
+    text: `Modeling <br/> Gallery`,
+    link: "/",
+  },
+  {
+    icon: "images/banner-left-icon4.svg",
+    text: "Shopping",
+    link: "/",
+  },
+  {
+    icon: "images/banner-left-icon5.svg",
+    text: `TV Videos <br/> & Movies`,
+    link: "/the-tube",
+  },
+  {
+    icon: "images/banner-left-icon6.svg",
+    text: `News <br/> updates`,
+    link: "/",
+  },
+];
 
 export default function Home() {
   return (
@@ -26,13 +51,14 @@ export default function Home() {
       </Head>
       <main>
         <HomeNavigation navigationType={1} />
-        <HomeBanner bannerType={1} VideoListData={VideoListData} />
-        <InterestingGallery />
-        <HomeMagazineAdd />
-        <ModellingGallery />
-        <ModellingGallerySlide />
-        <HomeOpenRightDoors />
-        <HomeTrendingAdd />
+        <HomeBanner
+          LeftMenusData={LeftMenusData}
+          bannerType={4}
+          VideoListData={VideoListData}
+          hideRightVideo={true}
+        />
+        <HomeSudio sectionTitle="Reality Shows" />
+        <ScdGallery />
         <ShortRealityVideo />
         <RelationLounges />
         <PersonalLinks />

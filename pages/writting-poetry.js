@@ -1,46 +1,23 @@
-import { useState, useEffect } from "react";
-import Masonry from "react-masonry-component";
-
 //
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 // Material Ui
 import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
-import Paper from "@mui/material/Paper";
-import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
-import AddIcon from "@mui/icons-material/Add";
-import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import Avatar from "@mui/material/Avatar";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import ShareIcon from "@mui/icons-material/Share";
-import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
-import VideoCommentInput from "clientComponents/SingleTubeVideo/VideoCommentInput";
-import CommentCard from "clientComponents/SingleTubeVideo/CommentCard";
-import MenuIcon from "@mui/icons-material/Menu";
-import Snackbar from "@mui/material/Snackbar";
-import SearchBar from "clientComponents/SearchBar";
-import NewsTicker from "clientComponents/NewsTicker";
 import GalleryHead from "clientComponents/GalleryHead";
-import { RandomGalleryCategoryData } from "data/RandomGalleryCategoryData";
-import { NewsTickerData } from "data/NewsTickerData";
+import SearchBar from "clientComponents/SearchBar";
 import WrittingPoetryCard from "clientComponents/WrittingPoetryCard";
+import { RandomGalleryCategoryData } from "data/RandomGalleryCategoryData";
 import { WrittingPoetryData } from "data/WrittingPoetryData";
 // Next js
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 const _ = require("lodash");
 
 function WrittingPoetry(props) {
@@ -134,7 +111,7 @@ function WrittingPoetry(props) {
           </Grid>
         </Container>
       </div>
-     
+
       <div className=" pt-10">
         <GalleryHead
           activeItem={"written"}

@@ -1,37 +1,26 @@
-import React, { useState, useRef, useEffect } from "react";
-import { findDOMNode } from "react-dom";
+import React, { useRef, useState } from "react";
 
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
-import ReactPlayer from "react-player";
-import { makeStyles, withStyles } from "@material-ui/core/styles";
-import Box from "@mui/material/Box";
 import Slider from "@material-ui/core/Slider";
+import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Tooltip from "@material-ui/core/Tooltip";
-import Grid from '@mui/material/Grid';
-import Paper from "@material-ui/core/Paper";
-import VolumeUpIcon from '@mui/icons-material/VolumeUp';
-import VolumeDownIcon from '@mui/icons-material/VolumeDown';
-import VolumeMuteIcon from '@mui/icons-material/VolumeMute';
-import FullscreenIcon from '@mui/icons-material/Fullscreen';
-import Popover from "@material-ui/core/Popover";
+import Box from "@mui/material/Box";
+import ReactPlayer from "react-player";
 // import screenful from "screenfull";
-import styles from 'styles/client/HomeBanner.module.scss'
+import styles from "styles/client/HomeBanner.module.scss";
 import Controls from "./Controls";
-// 
+//
 import BannerVideoList from "./BannerVideoList";
 
 import BannerLeftMenus from "../BannerLeftMenus";
-// 
+//
 import BannerMiddleContent from "../BannerMiddleContent";
 
 const useStyles = makeStyles((theme) => ({
-  banner_container:{
-      canvas:{
-        display: 'none',
-      }
+  banner_container: {
+    canvas: {
+      display: "none",
+    },
   },
   playerWrapper: {
     width: "100%",
@@ -162,14 +151,24 @@ const format = (seconds) => {
 
 let count = 0;
 
-function HomeBanner({bannerType,hideDescription,hideLeftMenu,VideoListData,pageTitleOnBanner}) {
+function HomeBanner({
+  bannerType,
+  hideDescription,
+  hideLeftMenu,
+  VideoListData,
+  pageTitleOnBanner,
+  hideRightVideo,
+  LeftMenusData,
+}) {
   const classes = useStyles();
-  
+
   const [showControls, setShowControls] = useState(false);
   // const [count, setCount] = useState(0);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [timeDisplayFormat, setTimeDisplayFormat] = React.useState("normal");
-  const [videoUrl,setVideoUrl] = React.useState('http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4')
+  const [videoUrl, setVideoUrl] = React.useState(
+    "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+  );
   const [bookmarks, setBookmarks] = useState([]);
   const [state, setState] = useState({
     pip: false,
@@ -217,7 +216,6 @@ function HomeBanner({bannerType,hideDescription,hideLeftMenu,VideoListData,pageT
   };
 
   const handleProgress = (changeState) => {
-   
     if (controlsRef.current.style.visibility == "visible") {
       count += 1;
     }
@@ -227,7 +225,6 @@ function HomeBanner({bannerType,hideDescription,hideLeftMenu,VideoListData,pageT
   };
 
   const handleSeekChange = (e, newValue) => {
-    
     setState({ ...state, played: parseFloat(newValue / 100) });
   };
 
@@ -237,7 +234,7 @@ function HomeBanner({bannerType,hideDescription,hideLeftMenu,VideoListData,pageT
 
   const handleSeekMouseUp = (e, newValue) => {
     setState({ ...state, seeking: false });
-  
+
     playerRef.current.seekTo(newValue / 100, "fraction");
   };
 
@@ -249,7 +246,6 @@ function HomeBanner({bannerType,hideDescription,hideLeftMenu,VideoListData,pageT
     setState({ ...state, seeking: false, volume: parseFloat(newValue / 100) });
   };
   const handleVolumeChange = (e, newValue) => {
-   
     setState({
       ...state,
       volume: parseFloat(newValue / 100),
@@ -262,7 +258,6 @@ function HomeBanner({bannerType,hideDescription,hideLeftMenu,VideoListData,pageT
   };
 
   const handleMouseMove = () => {
-   
     controlsRef.current.style.visibility = "visible";
     count = 0;
   };
@@ -325,51 +320,59 @@ function HomeBanner({bannerType,hideDescription,hideLeftMenu,VideoListData,pageT
 
   const totalDuration = format(duration);
 
-  const handleVideo = (e)=>{
-
-      setVideoUrl(e)
-      console.log('e',e)
-   
-  }
-
-
-
-
+  const handleVideo = (e) => {
+    setVideoUrl(e);
+    console.log("e", e);
+  };
 
   return (
     <>
-      
-      
-      <Container maxWidth={false} disableGutters={true} className={` ${bannerType == 3 ? 'h-[70vh]' : 'h-screen'} relative overflow-hidden`}>
-        {
-          pageTitleOnBanner && <Box className=" absolute top-[135px] w-full pl-[23px] pr-[23px] z-10" >
-            <h4 className=" text-24 font-medium rubik text-white uppercase drop-shadow-sm ">{pageTitleOnBanner}</h4>
+      <Container
+        maxWidth={false}
+        disableGutters={true}
+        className={` ${
+          bannerType == 3
+            ? "h-[70vh]"
+            : bannerType == 4
+            ? "h-[700px]"
+            : "h-screen"
+        } relative overflow-hidden`}
+      >
+        {pageTitleOnBanner && (
+          <Box className=" absolute top-[135px] w-full pl-[23px] pr-[23px] z-10">
+            <h4 className=" text-24 font-medium rubik text-white uppercase drop-shadow-sm ">
+              {pageTitleOnBanner}
+            </h4>
           </Box>
-        }
-        <BannerMiddleContent 
-        bannerType={bannerType} 
-        hideDescription={hideDescription}
-        hideLeftMenu={hideLeftMenu}
+        )}
+        <BannerMiddleContent
+          bannerType={bannerType}
+          hideDescription={hideDescription}
+          hideLeftMenu={hideLeftMenu}
         />
-        {
-          !hideLeftMenu && <BannerLeftMenus bannerType={bannerType} />
-        }
-         
-          {
-            bannerType === 1 || bannerType === 3   ? <BannerVideoList 
+        {!hideLeftMenu && (
+          <BannerLeftMenus
             bannerType={bannerType}
-            handleVideo={handleVideo} 
-            hideLeftMenu={hideLeftMenu} 
-            VideoListData={VideoListData} /> : ''
-          }
+            LeftMenusData={LeftMenusData}
+          />
+        )}
+
+        {bannerType === 1 || bannerType === 3 ? (
+          <BannerVideoList
+            bannerType={bannerType}
+            handleVideo={handleVideo}
+            hideLeftMenu={hideLeftMenu}
+            VideoListData={VideoListData}
+          />
+        ) : (
+          ""
+        )}
         <div
           onMouseMove={handleMouseMove}
           onMouseLeave={hanldeMouseLeave}
           ref={playerContainerRef}
           className={`${styles.playerWrapper} player-wrapper`}
         >
-          
-          
           <ReactPlayer
             className="react-player"
             ref={playerRef}
@@ -420,7 +423,6 @@ function HomeBanner({bannerType,hideDescription,hideLeftMenu,VideoListData,pageT
           />
         </div>
 
-        
         {/* <canvas ref={canvasRef} /> */}
       </Container>
     </>
