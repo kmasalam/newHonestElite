@@ -1,14 +1,9 @@
 import React from "react";
 // Material Ui
-import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
-import Paper from "@mui/material/Paper";
-import Grid from "@mui/material/Grid";
 // Next js
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 // Data
-import { ShortRealityData } from "data/ShortRealityData";
 // styles
 import styles from "styles/client/ShortRealityVideoBox.module.scss";
 // utility
@@ -19,27 +14,32 @@ function ShortRealityVideoBox({ ...allprops }) {
     return `/${src}?w=${width}&q=${quality || 75}`;
   };
 
-  const { item, style, className,itemIndex } = allprops;
+  const { item, withClass, className, itemIndex } = allprops;
+
+  console.log("withClass", withClass);
 
   return (
-    <div className={`short_reality_container__box  ${styles.short_reality_container__box} relative ${className} ${itemIndex > 6 && ' has_no_shape '}`} style={style}>
-      <div className="short_reality_container__box_inner relative">
-        <Image
-          className="short_reality_video_img "
-          loader={ImageLoader}
-          src={item.modelImage}
-          alt={item.status}
-          width={228}
-          height={369}
-        />
+    <div
+      className={`short_reality_container__box  ${withClass}  ${
+        styles.short_reality_container__box
+      } relative ${className} ${itemIndex > 6 && " has_no_shape "}`}
+    >
+      <div className="short_reality_container__box_inner relative px-1">
+        <div className=" h-[369px] relative ">
+          <Image
+            className="short_reality_video_img "
+            loader={ImageLoader}
+            src={item.modelImage}
+            alt={item.status}
+            layout="fill"
+          />
+        </div>
 
-                <style global jsx>{`
-                    .has_no_shape{
-                      margin-bottom: 10px !important;
-                    }
-                `}</style>
-
-
+        <style global jsx>{`
+          .has_no_shape {
+            margin-bottom: 10px !important;
+          }
+        `}</style>
 
         <div className="short_reality_container__box_content absolute w-full px-2">
           <div className="short_reality_box__top flex items-center justify-between">
@@ -47,7 +47,7 @@ function ShortRealityVideoBox({ ...allprops }) {
               <Link href={item.chanelLink}>
                 <a className=" inline-flex items-center justify-start">
                   <Image
-                    className="rounded-full "
+                    className="rounded-full w-full "
                     loader={ImageLoader}
                     src={item.userImage}
                     alt={item.status}
@@ -112,19 +112,17 @@ function ShortRealityVideoBox({ ...allprops }) {
             </Link>
           </div>
         </div>
-        {
-            itemIndex <= 6 && <div className="phone_bottom__parent absolute">
+        {itemIndex <= 6 && (
+          <div className="phone_bottom__parent absolute h-[42px] w-[97.5%] px-1 left-[50%] -translate-x-[50%]">
             <Image
               className="phone_bottom"
               loader={ImageLoader}
               src="images/phone_bottom.jpg"
               alt="phone bottom"
-              width={228}
-              height={42}
+              layout="fill"
             />
           </div>
-        }
-        
+        )}
       </div>
     </div>
   );

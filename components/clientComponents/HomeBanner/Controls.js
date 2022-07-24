@@ -1,34 +1,22 @@
-import React, { forwardRef, useState } from "react";
-import PropTypes from "prop-types";
-import Typography from "@material-ui/core/Typography";
-import { makeStyles, withStyles } from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
-import BookmarkIcon from '@mui/icons-material/Bookmark';
-import FastRewindIcon from '@mui/icons-material/FastRewind';
-import FastForwardIcon from '@mui/icons-material/FastForward';
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import PauseIcon from "@mui/icons-material/Pause";
 import Slider from "@material-ui/core/Slider";
+import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Tooltip from "@material-ui/core/Tooltip";
-import Grid from '@mui/material/Grid';
-import VolumeUp from "@mui/icons-material/VolumeUp";
+import PauseIcon from "@mui/icons-material/Pause";
 import VolumeDown from "@mui/icons-material/VolumeDown";
 import VolumeMute from "@mui/icons-material/VolumeOff";
-import FullScreen from "@mui/icons-material/Fullscreen";
-import Popover from "@material-ui/core/Popover";
-import Box from '@mui/material/Box';
+import VolumeUp from "@mui/icons-material/VolumeUp";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import PropTypes from "prop-types";
+import React, { forwardRef } from "react";
 // Next js
-import Link from 'next/link'
-import Image from 'next/image'
+import Image from "next/image";
 //styles
-import styles from 'styles/client/Controls.module.scss'
+import styles from "styles/client/Controls.module.scss";
 // icon
 
-
-
 const useStyles = makeStyles((theme) => ({
-  
   button: {
     margin: theme.spacing(1),
   },
@@ -49,10 +37,9 @@ const useStyles = makeStyles((theme) => ({
       color: "#fff",
     },
   },
-  soundBox:{
-    display: 'inline-flex',
-    flexFlow: 'column',
-
+  soundBox: {
+    display: "inline-flex",
+    flexFlow: "column",
   },
   volumeSlider: {
     width: 100,
@@ -120,6 +107,7 @@ const Controls = forwardRef(
       onPlaybackRateChange,
       onToggleFullScreen,
       volume,
+      bannerType,
       onVolumeChange,
       onBookmark,
     },
@@ -139,11 +127,16 @@ const Controls = forwardRef(
     const id = open ? "simple-popover" : undefined;
 
     const ImageLoader = ({ src, width, quality }) => {
-        return `/${src}?w=${width}&q=${quality || 75}`
-    }
+      return `/${src}?w=${width}&q=${quality || 75}`;
+    };
 
     return (
-      <div ref={ref} className={` w-full  ${styles.controlsWrapper} bottom-[140px] py-0 `}>
+      <div
+        ref={ref}
+        className={` w-full  ${styles.controlsWrapper} ${
+          bannerType === 4 ? " top-[55%]" : " bottom-[140px]"
+        }  py-0 `}
+      >
         <Grid
           className=" py-0"
           container
@@ -151,7 +144,6 @@ const Controls = forwardRef(
           justifyContent="space-between"
           style={{ flexGrow: 1 }}
         >
-         
           <Grid
             container
             direction="row"
@@ -159,44 +151,45 @@ const Controls = forwardRef(
             alignItems="center"
             style={{ padding: 16 }}
           >
-           
-
             <Grid item>
-                <IconButton
-                  onClick={onPlayPause}
-                  className={` ml-14 ${classes.bottomIcons}`}
-                >
-                  {playing ? (
-                    <PauseIcon className="pauseIcon text-white" fontSize="large" />
-                  ) : (
-                    //play-icon
-                    <Image
-                    className='playIcon'
+              <IconButton
+                onClick={onPlayPause}
+                className={` ml-14 ${classes.bottomIcons}`}
+              >
+                {playing ? (
+                  <PauseIcon
+                    className="pauseIcon text-white"
+                    fontSize="large"
+                  />
+                ) : (
+                  //play-icon
+                  <Image
+                    className="playIcon"
                     loader={ImageLoader}
                     src="images/play-icon.svg"
                     alt="Picture of the author"
                     width={40}
                     height={44}
-                    />
-                  )}
-                </IconButton>
+                  />
+                )}
+              </IconButton>
             </Grid>
             <Grid item>
-                    <Box className={classes.soundBox}>
-                    <IconButton
-                    // onClick={() => setState({ ...state, muted: !state.muted })}
-                    onClick={onMute}
-                    className={` text-white ${classes.bottomIcons} ${classes.volumeButton}`}
-                    >
-                    {muted ? (
-                        <VolumeMute fontSize="large" />
-                    ) : volume > 0.5 ? (
-                        <VolumeUp fontSize="large" />
-                    ) : (
-                        <VolumeDown fontSize="large" />
-                    )}
-                    </IconButton>
-                    {/* <Slider
+              <Box className={classes.soundBox}>
+                <IconButton
+                  // onClick={() => setState({ ...state, muted: !state.muted })}
+                  onClick={onMute}
+                  className={` text-white ${classes.bottomIcons} ${classes.volumeButton}`}
+                >
+                  {muted ? (
+                    <VolumeMute fontSize="large" />
+                  ) : volume > 0.5 ? (
+                    <VolumeUp fontSize="large" />
+                  ) : (
+                    <VolumeDown fontSize="large" />
+                  )}
+                </IconButton>
+                {/* <Slider
                         orientation="vertical"
                         min={0}
                         max={100}
@@ -206,10 +199,8 @@ const Controls = forwardRef(
                         onMouseDown={onSeekMouseDown}
                         onChangeCommitted={onVolumeSeekDown}
                       /> */}
-                    </Box>
+              </Box>
             </Grid>
-
-            
           </Grid>
         </Grid>
       </div>
@@ -236,5 +227,6 @@ Controls.propTypes = {
   totalDuration: PropTypes.string,
   muted: PropTypes.bool,
   playbackRate: PropTypes.number,
+  bannerType: PropTypes.number,
 };
 export default Controls;

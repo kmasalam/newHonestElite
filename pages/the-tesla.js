@@ -1,15 +1,18 @@
+import { Container, Grid } from "@mui/material";
 import Head from "next/head";
-
 // User Defined Components
 import Footer from "clientComponents/Footer";
 import HomeBanner from "clientComponents/HomeBanner";
 import HomeNavigation from "clientComponents/HomeNavigation";
 import HomeSudio from "clientComponents/HomeSudio";
+import LifeStyle from "clientComponents/LifeStyle";
 import PersonalLinks from "clientComponents/PersonalLinks";
 import RelationLounges from "clientComponents/RelationLounges";
 import ScdGallery from "clientComponents/ScdGallery";
+import ScdNewsLetter from "clientComponents/ScdNewsLetter";
+import SectionTitle from "clientComponents/SectionTitle";
 import ShortRealityVideo from "clientComponents/ShortRealityVideo";
-import { ScdGalleryData } from "data/ScdGalleryData";
+import { ScdGalleryData2, ScdLifeStyleData } from "data/ScdGalleryData";
 import { VideoListData } from "data/VideoListData";
 
 // new sdf
@@ -59,9 +62,33 @@ export default function Home() {
           hideRightVideo={true}
         />
         <HomeSudio sectionTitle="Reality Shows" />
-        <ScdGallery type={1} ScdGalleryData={ScdGalleryData} />
+        <ScdGallery type={2} ScdGalleryData={ScdGalleryData2} />
         <ShortRealityVideo />
-        <RelationLounges />
+        <ScdNewsLetter />
+        <Container className=" he_container pt-[70px] pb-[100px]">
+            <Grid container>
+                <Grid item xs={12}>
+                    <SectionTitle
+                    title={'LIFE STYLES'}
+                    size="text-[42px] font-semibold text-center "
+                    spacing={'pb-[46px]'}
+                    />
+                </Grid>
+            </Grid>
+            <Grid container spacing={2}>
+              {
+                ScdLifeStyleData && ScdLifeStyleData.map((item,i)=>(
+                  <Grid item xs={6} sm={6} md={4} lg={2} keyy={i}>
+                      <LifeStyle
+                      item={item}
+                      />
+                  </Grid>
+                ))
+              }
+                
+            </Grid>
+        </Container>
+        <RelationLounges  />
         <PersonalLinks />
         <Footer />
       </main>

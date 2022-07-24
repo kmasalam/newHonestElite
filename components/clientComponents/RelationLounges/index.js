@@ -1,33 +1,19 @@
 import React from "react";
 // Material Ui
 import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
-import Paper from "@mui/material/Paper";
-import Grid from "@mui/material/Grid";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
-import TextField from "@mui/material/TextField";
-import SearchIcon from "@mui/icons-material/Search";
 import Button from "@mui/material/Button";
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
 // Next js
-import Link from "next/link";
-import Image from "next/image";
 // Data
-const _ = require('lodash');
+const _ = require("lodash");
 //css
-import { useStyles } from "./RelationLoungesStyle";
-import { RelationshipDiagonosisData } from "data/RelationshipDiagonosisData";
 import AddIcon from "@mui/icons-material/Add";
-import RelationLoungesItem from "../RelationLoungesItem";
 import SearchBar from "clientComponents/SearchBar";
-
-import styles from 'styles/client/RelationLounges.module.scss'
+import { RelationshipDiagonosisData } from "data/RelationshipDiagonosisData";
+import RelationLoungesItem from "../RelationLoungesItem";
 
 function RelationLounges(props) {
- 
-
   const itemToLoad = 7;
   const [age, setAge] = React.useState("all");
   const [loungeItem, setLoungeItem] = React.useState(13);
@@ -46,24 +32,19 @@ function RelationLounges(props) {
     setLoungeItem(loungeItem + itemToLoad);
   };
 
-
   return (
     <div>
       <Container className="he_container">
         <Grid container>
-          <Grid item md={3}>
+          <Grid item sm={5} lg={3}>
             <Box>
-              <h4 className=" text-c2121 text-xl capitalize pb-4">
-              Relationship Diagnossis Lounges
+              <h4 className=" text-c2121 text-base md:text-lg lg:ext-xl capitalize pb-4">
+                Relationship Diagnossis Lounges
               </h4>
             </Box>
           </Grid>
-          <Grid item md={6}>
-              <SearchBar
-              searchbarType={'gray_form_box'}
-              size={''}
-              spacing={''}
-              />
+          <Grid item sm={7} lg={6}>
+            <SearchBar searchbarType={"gray_form_box"} size={""} spacing={""} />
           </Grid>
         </Grid>
       </Container>
@@ -74,29 +55,25 @@ function RelationLounges(props) {
               if (age === "all" && i <= loungeItem) {
                 return (
                   <RelationLoungesItem
-                  key={i}
-                  className=" relation_img "
-                  src={item.img}
-                  alt="relation image"
-                  width={230}
-                  height={208}
-                  style={{
-                    maxWidth: '14.28%'
-                  }}
+                    key={i}
+                    className=" relation_img "
+                    src={item.img}
+                    alt="relation image"
+                    width={230}
+                    height={208}
+                    widthClasses="flex-[0_0_50%] max-w-[50%] sm:flex-[0_0_33.33%] sm:max-w-[33.33%] md:flex-[0_0_25%] md:max-w-[25%] xl:flex-[0_0_14.28%] xl:max-w-[14.28%] "
                   />
                 );
               } else if (age === item.type && i <= loungeItem) {
                 return (
                   <RelationLoungesItem
-                  key={i}
-                  className=" relation_img "
-                  src={item.img}
-                  alt="relation image"
-                  width={230}
-                  height={208}
-                  style={{
-                    maxWidth: '14.28%'
-                  }}
+                    key={i}
+                    className=" relation_img "
+                    src={item.img}
+                    alt="relation image"
+                    width={230}
+                    height={208}
+                    widthClasses="flex-[0_0_50%] max-w-[50%] sm:flex-[0_0_33.33%] sm:max-w-[33.33%] md:flex-[0_0_25%] md:max-w-[25%] xl:flex-[0_0_14.28%] xl:max-w-[14.28%] "
                   />
                 );
               }

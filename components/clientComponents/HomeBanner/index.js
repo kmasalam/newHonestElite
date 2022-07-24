@@ -420,6 +420,7 @@ function HomeBanner({
             onToggleFullScreen={toggleFullScreen}
             volume={volume}
             onBookmark={addBookmark}
+            bannerType={bannerType}
           />
         </div>
 
