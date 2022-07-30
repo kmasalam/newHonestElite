@@ -1,28 +1,20 @@
-import React, { useState, useRef, useEffect, useCallback } from "react";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import Container from "@material-ui/core/Container";
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Grid';
+import React, { useRef, useState } from "react";
 
 // Next js
-import Link from "next/link";
 import Image from "next/image";
 const _ = require("lodash");
 // 
 
 //
-import ReactPlayer from "react-player";
 import Tooltip from "@material-ui/core/Tooltip";
+import ReactPlayer from "react-player";
 // import screenful from "screenfull";
 import Slider from "@material-ui/core/Slider";
 
 import { makeStyles, withStyles } from "@material-ui/core/styles";
+import { useFullScreenHandle } from "react-full-screen";
 import Controls from "./AudioPlayerControl";
-import dynamic from 'next/dynamic';
-import { FullScreen, useFullScreenHandle } from "react-full-screen";
 
 
 
@@ -247,7 +239,7 @@ function AudioPlayer({...allprops}) {
     const handleSeekMouseUp = (e, newValue) => {
      
       setState({ ...state, seeking: false });
-      // console.log(sliderRef.current.value)
+      // 
       playerRef.current.seekTo(newValue / 100, "fraction");
     };
   
@@ -273,7 +265,7 @@ function AudioPlayer({...allprops}) {
     };
   
     // const handleMouseMove = () => {
-    //   console.log("mousemove");
+    //   
     //   controlsRef.current.style.visibility = "visible";
     //   count = 0;
     // };

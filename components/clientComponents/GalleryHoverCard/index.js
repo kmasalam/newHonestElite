@@ -1,24 +1,15 @@
-import React from 'react'
-import Masonry from 'react-masonry-component';
 
-import {useState, useEffect} from 'react';
 // 
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 // Material Ui
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
-import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Grid';
-import Button from "@mui/material/Button";
-import AddIcon from '@mui/icons-material/Add';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShareIcon from '@mui/icons-material/Share';
 import MessageOutlinedIcon from '@mui/icons-material/MessageOutlined';
+import ShareIcon from '@mui/icons-material/Share';
+import Box from '@mui/material/Box';
 // Next js
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 const _ = require('lodash');
 
 
@@ -30,7 +21,7 @@ function GalleryHoverCard({...allprops}) {
 
     const {item, style} = allprops
 
-    console.log('item',item)
+    
     return (
         <>
             <Box className="he_gallery_hover_card p-5 rounded-none fadein ">

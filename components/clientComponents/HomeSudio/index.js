@@ -13,12 +13,13 @@ import Link from "next/link";
 //
 import HonestEliteCustomPlayer from "../HonestEliteCustomPlayer";
 
+import MenAllWomenTab from "clientComponents/MenAllWomenTab";
 import { EducationalVideoData } from "data/EducationalVideoData";
 import { LiveVideoCategoryData } from "data/LiveVideoCategoryData";
 import EduBoxScaffolding from "../EducationalVideo/EduBoxScaffolding";
 const _ = require("lodash");
 
-function HomeSudio({ sectionTitle }) {
+function HomeSudio({ sectionTitle,menAllWomen }) {
   const [sortableItem, setSortableItem] = useState("");
   const [activeItem, setActiveItem] = useState("all");
   const itemToLoad = 6;
@@ -57,7 +58,11 @@ function HomeSudio({ sectionTitle }) {
       <Container className=" he_container" spacing={3}>
         <Grid container spacing={3}>
           <Grid item md={6}>
-            <Box className=" flex flex-wrap ml-8 h-full items-center pt-5 ">
+            {
+              (menAllWomen && menAllWomen.length > 0) &&  <MenAllWomenTab menAllWomen={menAllWomen}/>
+            }
+            
+            <Box className={`flex flex-wrap ml-8 h-full items-center  flex flex-wrap ml-8 h-full items-center ${menAllWomen && menAllWomen.length > 0 ? 'pt-0' : 'pt-5'}`}>
               <Box className="w-3/4 pr-5  -mt-16">
                 <Box className="mb-4">
                   <Image

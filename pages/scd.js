@@ -9,6 +9,7 @@ import PersonalLinks from "clientComponents/PersonalLinks";
 import RelationLounges from "clientComponents/RelationLounges";
 import ScdGallery from "clientComponents/ScdGallery";
 import ShortRealityVideo from "clientComponents/ShortRealityVideo";
+import { ScdGalleryData } from "data/ScdGalleryData";
 import { VideoListData } from "data/VideoListData";
 
 // new sdf
@@ -58,7 +59,7 @@ export default function Home() {
           hideRightVideo={true}
         />
         <HomeSudio sectionTitle="Reality Shows" />
-        <ScdGallery />
+        <ScdGallery type={1} ScdGalleryData={ScdGalleryData} />
         <ShortRealityVideo />
         <RelationLounges />
         <PersonalLinks />

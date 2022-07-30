@@ -1,20 +1,17 @@
-import React,{useEffect, useState,useMemo} from 'react';
-import { Box } from '@mui/material';
-import Link from 'next/link'
-import Image from 'next/image'
-import { makeStyles, withStyles } from '@material-ui/core/styles';
-import LoginIcon from '@mui/icons-material/Login';
-import BookIcon from '@mui/icons-material/Book';
-import BedtimeOutlinedIcon from '@mui/icons-material/BedtimeOutlined';
 import BookOutlinedIcon from '@mui/icons-material/BookOutlined';
+import LoginIcon from '@mui/icons-material/Login';
+import { Box } from '@mui/material';
+import Image from 'next/image';
+import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
 // Styles
 // import { useStyles } from "./HomeNavigationStyle";
 // User Defined
-import styles from 'styles/client/HomeNavigation.module.scss'
+import styles from 'styles/client/HomeNavigation.module.scss';
 
-import {navList, HomeNavSecondData} from 'data/MenuData'
 import NightlightOutlinedIcon from '@mui/icons-material/NightlightOutlined';
-import PlayGroundMegaMenu from 'clientComponents/PlayGroundMegaMenu'
+import PlayGroundMegaMenu from 'clientComponents/PlayGroundMegaMenu';
+import { HomeNavSecondData, navList } from 'data/MenuData';
 
 
 
@@ -29,7 +26,7 @@ function HomeNavigation({...allprops}) {
         setScrollY(window.pageYOffset);
     }
 
-    console.log('navigationType', navigationType)
+    
 
     useEffect(()=>{
 
@@ -45,7 +42,7 @@ function HomeNavigation({...allprops}) {
 
     },[])
 
-    console.log('scrollY',scrollY)
+    
     
     const ImageLoader = ({ src, width, quality }) => {
         return `/${src}?w=${width}&q=${quality || 75}`

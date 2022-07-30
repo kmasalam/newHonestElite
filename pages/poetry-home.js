@@ -1,60 +1,42 @@
-import { useState, useEffect,useRef,forwardRef,createRef } from "react";
-import Masonry from "react-masonry-component";
+import { forwardRef, useEffect, useRef, useState } from "react";
 
 //
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 // Material Ui
-import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
-import Paper from "@mui/material/Paper";
-import Grid from "@mui/material/Grid";
-import Button from "@mui/material/Button";
 import AddIcon from "@mui/icons-material/Add";
-import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import Avatar from "@mui/material/Avatar";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import ShareIcon from "@mui/icons-material/Share";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
 
 
 
 import RemoveIcon from '@mui/icons-material/Remove';
 
 // Next js
-import Link from "next/link";
-import Image from "next/image";
-const _ = require("lodash");
-import SearchBar from "clientComponents/SearchBar";
-import NewsTicker from "clientComponents/NewsTicker";
 import GalleryHead from "clientComponents/GalleryHead";
-import { RandomGalleryCategoryData } from "data/RandomGalleryCategoryData";
-import { NewsTickerData } from "data/NewsTickerData";
 import PoetryCard from "clientComponents/PoetryCard";
+import SearchBar from "clientComponents/SearchBar";
 import { PoetryData } from "data/PoetryData";
+import { RandomGalleryCategoryData } from "data/RandomGalleryCategoryData";
+import Image from "next/image";
+import Link from "next/link";
+const _ = require("lodash");
 //
+import ClickAwayListener from '@mui/material/ClickAwayListener';
 import KnowledgeBaseComponent from "clientComponents/KnowledgeBaseComponent";
 import { KnowledgeBaseData } from "data/KnowledgeBaseData";
 import { PlaygroundData } from "data/PlaygroundData";
 import { PoetrySearchCategory } from "data/RelationshipDiagonosisData";
-import ClickAwayListener from '@mui/material/ClickAwayListener';
 
 import ClassOutlinedIcon from '@mui/icons-material/ClassOutlined';
-import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
+import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 
 const PlagounrItemBox = forwardRef(({href,number,text }, ref) => {
-  console.log('href',ref);
+  
   return (
     <Link href={href}   >
         <a className=" text-white rubik font-normal text-12 rubik py-[7px] leading-4 block px-[25px] pr[10px] transition-all duration-300 hover:scale-125 pb-12 " ref={ref}>
@@ -97,7 +79,7 @@ function PoetryHome(props) {
 
 
   const handleHeaderText = (e,item) =>{
-    console.log('text', e, item)
+    
   }
 
   const handleScrollDown = () =>{
@@ -108,8 +90,8 @@ function PoetryHome(props) {
 
 
 
-  console.log('new creat',newCreatableEl);
-  console.log('scrollableEl',scrollableEl);
+  
+  
 
   return (
     <>
@@ -204,7 +186,7 @@ function PoetryHome(props) {
                                     <div className="playground_item_box h-[180px] overflow-y-auto" ref={scrollableEl}>
                                     {
                                         PlaygroundData && [...PlaygroundData].splice(0,playgroundItem).map((item,i)=>{
-                                          console.log(playgroundItem,i+1);
+                                          
                                             if(playgroundItem -1  === i){
                                               return(
                                                   <PlagounrItemBox

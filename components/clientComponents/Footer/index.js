@@ -23,7 +23,7 @@ function Footer(props) {
           className="he_container border-b border-zinc-200   pb-10"
         >
           <Grid container>
-            <Grid item md={4}>
+            <Grid item xs={12} sm={6} lg={4} className="sm:mb-3 lg:mb-0">
               <Box className=" bg-c2121 pt-4 pl-8 pr-8 pb-10">
                 <div className="footer_widget__top pb-4">
                   <Grid container>
@@ -51,25 +51,25 @@ function Footer(props) {
                   </Grid>
                 </div>
                 <div className="footer_widget__middle flex flex-wrap  items-center">
-                  <div className="footer_widget__middle_left w-1/2">
-                    <div className="rubik text-base text-cd6d5">
+                  <div className="footer_widget__middle_left lg:w-1/2">
+                    <div className="rubik text-10 lg:text-base text-cd6d5">
                       2013 - 2021 All rights reserved
                     </div>
-                    <div className="rubik text-base text-cd6d5">
+                    <div className="rubik text-10 lg:text-base text-cd6d5">
                       {" "}
                       DMCA Notice of copyright infringement
                     </div>
-                    <div className="rubik text-base text-cd6d5">
+                    <div className="rubik text-10 lg:text-base text-cd6d5">
                       Terms and conditions
                     </div>
-                    <div className="rubik text-base text-cd6d5">
+                    <div className="rubik text-10 lg:text-base text-cd6d5">
                       Privacy Policy
                     </div>
-                    <div className="rubik text-base text-cd6d5">
+                    <div className="rubik text-10 lg:text-base text-cd6d5">
                       18 U.S.C 2257 Record keeping
                     </div>
                   </div>
-                  <div className="footer_widget__middle_right w-1/2 text-right">
+                  <div className="footer_widget__middle_right mt-2 lg:mt-0 lg:w-1/2 text-right">
                     <Box className="social_widget__bar inline-flex items-center justify-start">
                       <Link href="/">
                         <a
@@ -113,30 +113,32 @@ function Footer(props) {
                     </Box>
                   </div>
                 </div>
-                <div className="footer_widget__bottom mt-8">
-                  <Box className="rubik text-lg text-cd6d5 font-medium">
+                <div className="footer_widget__bottom mt-4 lg:mt-8">
+                  <Box className="rubik text-sm lg:text-base lg:text-lg text-cd6d5 font-medium">
                     Records compliance statement
                   </Box>
-                  <Box className="rubik text-base text-cd6d5">
+                  <Box className="rubik text-sm lg:text-base text-cd6d5">
                     © T.H.E Entertainment
                   </Box>
                 </div>
               </Box>
             </Grid>
-            <Grid item md={3}>
-              <Box className=" pl-12 border-l-2 border-l-slate-200">
-                <h5 className=" rubik font-medium text-2xl mb-7">Element</h5>
+            <Grid item xs={12} sm={6} lg={3} className="sm:mb-3 lg:mb-0">
+              <Box className=" pl-12 lg:border-l-2 border-l-slate-200">
+                <h5 className=" rubik font-medium text-lg lg:text-2xl mb-7">
+                  Element
+                </h5>
                 <ul>
                   <li className="mb-8">
                     <Link href="/">
                       <a>
-                        <span className="font-medium rubik text-lg">
+                        <span className="font-medium rubik text-base lg:text-lg">
                           Honest
                         </span>
-                        <span className=" bg-primary text-white ml-2 mr-3 inline-flex uppercase font-medium text-lg px-1">
+                        <span className=" bg-primary text-white ml-2 mr-3 inline-flex uppercase font-medium text-base lg:text-lg px-1">
                           ELLITE
                         </span>
-                        <span className=" text-c6f6f font-normal  rubik text-lg">
+                        <span className=" text-c6f6f font-normal  rubik text-base lg:text-lg">
                           Social Interaction
                         </span>
                       </a>
@@ -145,13 +147,13 @@ function Footer(props) {
                   <li className="mb-8">
                     <Link href="/">
                       <a>
-                        <span className="font-medium rubik text-lg">
+                        <span className="font-medium rubik text-base lg:text-lg">
                           Honest
                         </span>
-                        <span className=" bg-cec1a text-white ml-2 mr-3 inline-flex uppercase font-medium text-lg px-1">
+                        <span className=" bg-cec1a text-white ml-2 mr-3 inline-flex uppercase font-medium text-base lg:text-lg px-1">
                           ELLITE
                         </span>
-                        <span className=" text-c6f6f font-normal  rubik text-lg">
+                        <span className=" text-c6f6f font-normal  rubik text-base lg:text-lg">
                           Social Interaction
                         </span>
                       </a>
@@ -160,13 +162,13 @@ function Footer(props) {
                   <li className="mb-8">
                     <Link href="/">
                       <a>
-                        <span className="font-medium rubik text-lg">
+                        <span className="font-medium rubik text-base lg:text-lg">
                           Honest
                         </span>
-                        <span className=" bg-cf081 text-white ml-2 mr-3 inline-flex uppercase font-medium text-lg px-1">
+                        <span className=" bg-cf081 text-white ml-2 mr-3 inline-flex uppercase font-medium text-base lg:text-lg px-1">
                           ELLITE
                         </span>
-                        <span className=" text-c6f6f font-normal  rubik text-lg">
+                        <span className=" text-c6f6f font-normal  rubik text-base lg:text-lg">
                           Social Interaction
                         </span>
                       </a>
@@ -175,13 +177,13 @@ function Footer(props) {
                   <li className="mb-8">
                     <Link href="/">
                       <a>
-                        <span className="font-medium rubik text-lg">
+                        <span className="font-medium rubik text-base lg:text-lg">
                           Honest
                         </span>
-                        <span className=" bg-c982a text-white ml-2 mr-3 inline-flex uppercase font-medium text-lg px-1">
+                        <span className=" bg-c982a text-white ml-2 mr-3 inline-flex uppercase font-medium text-base lg:text-lg px-1">
                           ELLITE
                         </span>
-                        <span className=" text-c6f6f font-normal  rubik text-lg">
+                        <span className=" text-c6f6f font-normal  rubik text-base lg:text-lg">
                           Social Interaction
                         </span>
                       </a>
@@ -190,13 +192,13 @@ function Footer(props) {
                   <li className="mb-8">
                     <Link href="/">
                       <a>
-                        <span className="font-medium rubik text-lg">
+                        <span className="font-medium rubik text-base lg:text-lg">
                           Honest
                         </span>
-                        <span className=" bg-c6b1a text-white ml-2 mr-3 inline-flex uppercase font-medium text-lg px-1">
+                        <span className=" bg-c6b1a text-white ml-2 mr-3 inline-flex uppercase font-medium text-base lg:text-lg px-1">
                           ELLITE
                         </span>
-                        <span className=" text-c6f6f font-normal  rubik text-lg">
+                        <span className=" text-c6f6f font-normal  rubik text-base lg:text-lg">
                           Social Interaction
                         </span>
                       </a>
@@ -205,62 +207,64 @@ function Footer(props) {
                 </ul>
               </Box>
             </Grid>
-            <Grid item md={2}>
-              <Box className=" pl-12 border-l-2 border-l-slate-200 h-full">
-                <h5 className=" rubik font-medium text-2xl mb-7">Jobs</h5>
+            <Grid item xs={12} sm={6} lg={2}>
+              <Box className=" pl-12 lg:border-l-2 border-l-slate-200 h-full">
+                <h5 className=" rubik font-medium text-lg lg:text-2xl mb-7">
+                  Jobs
+                </h5>
                 <ul>
                   <li>
                     <Link href="/">
-                      <a className=" leading-8 text-base text-c6f6f rubik font-normal capitalize tracking-wide  hover:text-black hover:font-medium transition ">
+                      <a className=" leading-8 text-sm md:text-base text-c6f6f rubik font-normal capitalize tracking-wide  hover:text-black hover:font-medium transition ">
                         Now Hiring
                       </a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/">
-                      <a className=" leading-8 text-base text-c6f6f rubik font-normal capitalize tracking-wide hover:text-black hover:font-medium transition">
+                      <a className=" leading-8 text-sm md:text-base text-c6f6f rubik font-normal capitalize tracking-wide hover:text-black hover:font-medium transition">
                         Models
                       </a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/">
-                      <a className=" leading-8 text-base text-c6f6f rubik font-normal capitalize tracking-wide hover:text-black hover:font-medium transition">
+                      <a className=" leading-8 text-sm md:text-base text-c6f6f rubik font-normal capitalize tracking-wide hover:text-black hover:font-medium transition">
                         Programmers Graphic Designers
                       </a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/">
-                      <a className=" leading-8 text-base text-c6f6f rubik font-normal capitalize tracking-wide hover:text-black hover:font-medium transition">
+                      <a className=" leading-8 text-sm md:text-base text-c6f6f rubik font-normal capitalize tracking-wide hover:text-black hover:font-medium transition">
                         Broadway managers
                       </a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/">
-                      <a className=" leading-8 text-base text-c6f6f rubik font-normal capitalize tracking-wide hover:text-black hover:font-medium transition">
+                      <a className=" leading-8 text-sm md:text-base text-c6f6f rubik font-normal capitalize tracking-wide hover:text-black hover:font-medium transition">
                         Video TV editors
                       </a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/">
-                      <a className=" leading-8 text-base text-c6f6f rubik font-normal capitalize tracking-wide hover:text-black hover:font-medium transition">
+                      <a className=" leading-8 text-sm md:text-base text-c6f6f rubik font-normal capitalize tracking-wide hover:text-black hover:font-medium transition">
                         Producers
                       </a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/">
-                      <a className=" leading-8 text-base text-c6f6f rubik font-normal capitalize tracking-wide hover:text-black hover:font-medium transition">
+                      <a className=" leading-8 text-sm md:text-base text-c6f6f rubik font-normal capitalize tracking-wide hover:text-black hover:font-medium transition">
                         Program managers
                       </a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/">
-                      <a className=" leading-8 text-base text-c6f6f rubik font-normal capitalize tracking-wide hover:text-black hover:font-medium transition">
+                      <a className=" leading-8 text-sm md:text-base text-c6f6f rubik font-normal capitalize tracking-wide hover:text-black hover:font-medium transition">
                         Marketing executive
                       </a>
                     </Link>
@@ -268,9 +272,9 @@ function Footer(props) {
                 </ul>
               </Box>
             </Grid>
-            <Grid item md={3}>
-              <Box className=" pl-12 border-l-2  border-l-slate-200 h-full">
-                <h5 className=" rubik font-medium text-2xl mb-7">
+            <Grid item xs={12} sm={6} lg={3}>
+              <Box className=" pl-12 lg:border-l-2  border-l-slate-200 h-full">
+                <h5 className=" rubik font-medium text-lg lg:text-2xl mb-7">
                   Social links
                 </h5>
                 <Box className="social_widget__bar inline-flex items-center justify-start">
@@ -328,7 +332,7 @@ function Footer(props) {
                   </Link>
                 </Box>
                 <Box className=" mt-6 bg-primary p-8">
-                  <p className=" text-white rubik font-normal leading-6 text-md">
+                  <p className=" text-white rubik font-normal leading-6 text-sm lg:text-md">
                     Zero Prostitution, All Humans are by product of Sex, This
                     Platform is meant for singles & couples that need Education,
                     Information & Entertainment in the Sensual Industry

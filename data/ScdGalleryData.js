@@ -85,3 +85,113 @@ export const ScdGalleryData = [
     category: "educational",
   },
 ];
+export const ScdGalleryData2 = [
+  {
+    image: "images/scd-gallery/scd-gallery18.jpg",
+    title: "Side-chick Abuse",
+    category: "educational",
+  },
+  {
+    image: "images/scd-gallery/scd-gallery19.jpg",
+    title: "Side-chick Abuse",
+    category: "educational",
+  },
+  {
+    image: "images/scd-gallery/scd-gallery20.jpg",
+    title: "Side-chick Abuse",
+    category: "educational",
+  },
+  {
+    image: "images/scd-gallery/scd-gallery21.jpg",
+    title: "Side-chick Abuse",
+    category: "educational",
+  },
+  {
+    image: "images/scd-gallery/scd-gallery22.jpg",
+    title: "Side-chick Abuse",
+    category: "educational",
+  },
+  {
+    image: "images/scd-gallery/scd-gallery23.jpg",
+    title: "Side-chick Abuse",
+    category: "educational",
+  },
+  {
+    image: "images/scd-gallery/scd-gallery24.jpg",
+    title: "Side-chick Abuse",
+    category: "educational",
+  },
+  {
+    image: "images/scd-gallery/scd-gallery25.jpg",
+    title: "Side-chick Abuse",
+    category: "educational",
+  },
+  {
+    image: "images/scd-gallery/scd-gallery26.jpg",
+    title: "Side-chick Abuse",
+    category: "educational",
+  },
+  {
+    image: "images/scd-gallery/scd-gallery27.jpg",
+    title: "Side-chick Abuse",
+    category: "educational",
+  },
+  {
+    image: "images/scd-gallery/scd-gallery28.jpg",
+    title: "Side-chick Abuse",
+    category: "educational",
+  },
+  {
+    image: "images/scd-gallery/scd-gallery29.jpg",
+    title: "Side-chick Abuse",
+    category: "educational",
+  },
+  {
+    image: "images/scd-gallery/scd-gallery30.jpg",
+    title: "Side-chick Abuse",
+    category: "educational",
+  },
+  {
+    image: "images/scd-gallery/scd-gallery31.jpg",
+    title: "Side-chick Abuse",
+    category: "educational",
+  },
+  {
+    image: "images/scd-gallery/scd-gallery32.jpg",
+    title: "Side-chick Abuse",
+    category: "educational",
+  },
+  {
+    image: "images/scd-gallery/scd-gallery33.jpg",
+    title: "Side-chick Abuse",
+    category: "educational",
+  },
+];
+
+
+export const ScdLifeStyleData = [
+    {
+      image: "images/scd-gallery/scd-lifstyle1.jpg",
+      title: "L",
+    },
+    {
+      image: "images/scd-gallery/scd-lifstyle2.jpg",
+      title: "L",
+    },
+    {
+      image: "images/scd-gallery/scd-lifstyle3.jpg",
+      title: "L",
+    },
+    {
+      image: "images/scd-gallery/scd-lifstyle4.jpg",
+      title: "L",
+    },
+    {
+      image: "images/scd-gallery/scd-lifstyle5.jpg",
+      title: "L",
+    },
+    {
+      image: "images/scd-gallery/scd-lifstyle6.jpg",
+      title: "L",
+    },
+]

@@ -1,39 +1,15 @@
-import {useState, useEffect} from "react";
-import Masonry from "react-masonry-component";
 
 //
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 // Material Ui
-import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
-import Paper from "@mui/material/Paper";
-import Grid from "@mui/material/Grid";
-import Button from "@mui/material/Button";
-import AddIcon from "@mui/icons-material/Add";
-import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
 // Next js
-import Link from "next/link";
 import Image from "next/image";
 // data
-import { RandomGalleryData } from "../data/RandomGalleryData";
 const _ = require("lodash");
 //
-import SearchBar from 'clientComponents/SearchBar'
-import GalleryHoverCard from "clientComponents/GalleryHoverCard";
-import GalleryHead from "clientComponents/GalleryHead";
-import {RandomGalleryCategoryData} from 'data/RandomGalleryCategoryData'
-import DumpKeepCard from 'clientComponents/DumpKeepCard'
-import NewsTicker from 'clientComponents/NewsTicker'
-import {DumpKeepData} from "data/DumpKeepData"
-import {NewsTickerData} from 'data/NewsTickerData'
 
-import {ModelingGalleryData} from 'data/ModelingGalleryData'
+import { ModelingGalleryData } from 'data/ModelingGalleryData';
 
 
 function ModellingGallery(props) {
@@ -41,7 +17,7 @@ function ModellingGallery(props) {
         return `/${src}?w=${width}&q=${quality || 75}`;
     };
 
-    console.log('ModelingGalleryData',ModelingGalleryData)
+    
 
     return (
         <div className="scope_parent">

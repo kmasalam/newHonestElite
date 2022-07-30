@@ -322,7 +322,7 @@ function HomeBanner({
 
   const handleVideo = (e) => {
     setVideoUrl(e);
-    console.log("e", e);
+    
   };
 
   return (
@@ -420,6 +420,7 @@ function HomeBanner({
             onToggleFullScreen={toggleFullScreen}
             volume={volume}
             onBookmark={addBookmark}
+            bannerType={bannerType}
           />
         </div>
 
