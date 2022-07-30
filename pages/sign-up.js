@@ -13,13 +13,12 @@ import Link from "next/link";
 const _ = require("lodash");
 
 
-//
+// just a comment
 
 import { useForm } from "react-hook-form";
 
 function SignUp(props) {
     const { register, formState: { errors }, handleSubmit } = useForm();
-    const onSubmit = (data) => 
     const ImageLoader = ({ src, width, quality }) => {
         return `/${src}?w=${width}&q=${quality || 75}`;
       };
@@ -77,7 +76,7 @@ function SignUp(props) {
                                 <p className=" text-lg rubik text-c6f6f pb-[40px]  ">
                                     Enter your credentials to your acces your account
                                 </p>
-                                <form onSubmit={handleSubmit(onSubmit)}>
+                                <form >
                                     <Grid container spacing={4}>
                                         <Grid item md={6}>
                                             <Box className=" honestElite_input_field relative z-20">

@@ -22,7 +22,6 @@ import { useForm } from "react-hook-form";
 
 function SignIn(props) {
     const { register, handleSubmit } = useForm();
-    const onSubmit = (data) => 
     const ImageLoader = ({ src, width, quality }) => {
         return `/${src}?w=${width}&q=${quality || 75}`;
       };
