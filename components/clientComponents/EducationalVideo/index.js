@@ -1,25 +1,15 @@
-import { useEffect, useState, memo} from "react";
+import { memo, useEffect, useState } from "react";
 // Material Ui
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
-import TextField from "@mui/material/TextField";
-import SearchIcon from "@mui/icons-material/Search";
-import Button from "@mui/material/Button";
 import AddIcon from '@mui/icons-material/Add';
+import Button from "@mui/material/Button";
 // next js
-import Link from "next/link";
-import Image from "next/image";
 //
-import SectionTitle from "../SectionTitle";
 import { EducationalVideoData } from "data/EducationalVideoData";
-import { ContactlessOutlined } from "@mui/icons-material";
+import SectionTitle from "../SectionTitle";
 import EduBoxScaffolding from "./EduBoxScaffolding";
 const _ = require("lodash");
 
@@ -61,7 +51,7 @@ function EducationalVideo(props) {
     }
 
 
-    console.log("activeItem", activeItem);
+    
   }, [EducationalVideoData]);
 
   return (

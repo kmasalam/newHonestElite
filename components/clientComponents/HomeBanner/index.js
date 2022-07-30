@@ -322,7 +322,7 @@ function HomeBanner({
 
   const handleVideo = (e) => {
     setVideoUrl(e);
-    console.log("e", e);
+    
   };
 
   return (

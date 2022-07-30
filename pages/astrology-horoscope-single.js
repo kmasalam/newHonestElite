@@ -1,58 +1,39 @@
-import { useState, useEffect } from "react";
-import Masonry from 'react-masonry-css'
+import Masonry from 'react-masonry-css';
 
 //
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 // Material Ui
 import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
-import Paper from "@mui/material/Paper";
-import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
-import AddIcon from "@mui/icons-material/Add";
-import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
 import PerfectScrollbar from "react-perfect-scrollbar";
 // Next js
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 // data
-import { RandomGalleryData } from "../data/RandomGalleryData";
 const _ = require("lodash");
 //
-import SearchBar from "clientComponents/SearchBar";
-import GalleryHoverCard from "clientComponents/GalleryHoverCard";
-import GalleryHead from "clientComponents/GalleryHead";
-import { RandomGalleryCategoryData } from "data/RandomGalleryCategoryData";
-import AstrologyCard from "clientComponents/AstrologyCard";
-import AstrologyMiniCard from "clientComponents/AstrologyCard/AstrologyMiniCard";
 import AstrologyMasonaryCard from "clientComponents/AstrologyCard/AstrologyMasonaryCard";
+import AstrologyMiniCard from "clientComponents/AstrologyCard/AstrologyMiniCard";
+import GalleryHead from "clientComponents/GalleryHead";
+import SearchBar from "clientComponents/SearchBar";
+import { RandomGalleryCategoryData } from "data/RandomGalleryCategoryData";
 
-import { HororscopeCategory, astrologyData } from "data/HororscopeData";
+import { astrologyData } from "data/HororscopeData";
 //
-import PoetryAuthorCard from "clientComponents/PoetryAuthorCard";
-import { PoetryData } from "data/PoetryData";
 import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
+import PoetryAuthorCard from "clientComponents/PoetryAuthorCard";
 
-import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined';
-import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
-import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
-import TourOutlinedIcon from '@mui/icons-material/TourOutlined';
-import ShareOutlinedIcon from '@mui/icons-material/ShareOutlined';
-import CommentOutlinedIcon from '@mui/icons-material/CommentOutlined';
 import VideoCommentInput from "clientComponents/SingleTubeVideo/VideoCommentInput";
+import { astrologyComments } from 'data/HororscopeData';
 import { SingleTubeVideoData } from "data/SingleTubeVideoData";
-import {astrologyComments} from 'data/HororscopeData'
 //
-import SingleAstrologyMetaBar from 'clientComponents/AstrologyCard/SingleAstrologyMetaBar'
-import CommentCard from 'clientComponents/SingleTubeVideo/CommentCard'
-import AstrologyBoxCard from 'clientComponents/AstrologyCard/AstrologyBoxCard'
-import Head from 'next/head'
+import AstrologyBoxCard from 'clientComponents/AstrologyCard/AstrologyBoxCard';
+import SingleAstrologyMetaBar from 'clientComponents/AstrologyCard/SingleAstrologyMetaBar';
+import CommentCard from 'clientComponents/SingleTubeVideo/CommentCard';
+import Head from 'next/head';
 
 function AstrologyHororshopeSingle(props) {
   const ImageLoader = ({ src, width, quality }) => {
@@ -66,7 +47,7 @@ function AstrologyHororshopeSingle(props) {
   };
 
 
-    console.log('astrologyComments',astrologyComments)
+    
 
   return (
     <>

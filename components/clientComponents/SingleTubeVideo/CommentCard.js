@@ -1,18 +1,12 @@
-import React from 'react'
 //mui
 import { Avatar, Box } from '@mui/material';
-import Button from '@mui/material/Button';
 //icon
 // Next js
-import Link from "next/link";
 import Image from "next/image";
 const _ = require("lodash");
 //
-import HonestEliteCustomPlayer from '../HonestEliteCustomPlayer'
+import HonestEliteCustomPlayer from '../HonestEliteCustomPlayer';
 
-import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
-import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
-import FlagIcon from '@mui/icons-material/Flag';
 import AudioPlayer from '../AudioPlayer';
 import CommentFooter from './CommentFooter';
 
@@ -25,7 +19,7 @@ export default function CommentCard({item,width,height,commentsType,hasGallery ,
 
  
 
-  console.log('commentsType',item)
+  
   if(commentsType == 2){
         return(
             <Box className=' flex items-center justify-start'>

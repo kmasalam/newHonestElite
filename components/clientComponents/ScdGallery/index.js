@@ -36,7 +36,7 @@ function ScdGallery({ type, ScdGalleryData }) {
                     </Link>
                   </div>
                   <Image
-                    className=" rounded-md"
+                    className=" rounded-none"
                     loader={ImageLoader}
                     src={`${item.image}`}
                     srcSet={`${item.image}`}
@@ -54,7 +54,7 @@ function ScdGallery({ type, ScdGalleryData }) {
     );
   } else if (type == 2) {
     return (
-      <Container className="he_container_medium pt-[100px] pb-[87px]">
+      <Container className="he_container_medium pt-[100px] pb-[87px] ">
         <Box className=" w-full">
           <Masonry columns={{ xs: 2, sm: 3, lg: 4 }} spacing={2}>
             {ScdGalleryData.map((item, index) => {
@@ -62,7 +62,7 @@ function ScdGallery({ type, ScdGalleryData }) {
               return (
                 <div
                   key={index}
-                  className=" group relative"
+                  className=" group relative rounded-none"
                   style={{
                     height: `${randomHeight}px`,
                   }}
@@ -80,7 +80,7 @@ function ScdGallery({ type, ScdGalleryData }) {
                     </Link>
                   </div>
                   <Image
-                    className=" rounded-md"
+                    className=" rounded-none"
                     loader={ImageLoader}
                     src={`${item.image}`}
                     srcSet={`${item.image}`}
@@ -116,17 +116,15 @@ function ScdGallery({ type, ScdGalleryData }) {
                   </Link>
                 </div>
                 <Image
-                  src={`${item.image}?w=162&auto=format`}
-                  srcSet={`${item.image}?w=162&auto=format&dpr=2 2x`}
-                  alt={item.title}
-                  loading="lazy"
-                  style={{
-                    borderBottomLeftRadius: 4,
-                    borderBottomRightRadius: 4,
-                    display: "block",
-                    width: "100%",
-                  }}
-                />
+                    className=" rounded-none"
+                    loader={ImageLoader}
+                    src={`${item.image}`}
+                    srcSet={`${item.image}`}
+                    alt={item.title}
+                    loading="lazy"
+                    layout="fill"
+                    objectFit="cover"
+                  />
               </div>
             ))}
           </Masonry>

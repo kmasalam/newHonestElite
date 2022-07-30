@@ -16,7 +16,7 @@ function ShortRealityVideoBox({ ...allprops }) {
 
   const { item, withClass, className, itemIndex } = allprops;
 
-  console.log("withClass", withClass);
+  
 
   return (
     <div
